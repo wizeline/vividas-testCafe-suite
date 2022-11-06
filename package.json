@@ -1,0 +1,24 @@
+{
+  "name": "testcafe-suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./pom/tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-cerv/TestCafe-Suite.git"
+  },
+  "keywords": [],
+  "author": "Carlos Eduardo Cervantes Arteaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos-cerv/TestCafe-Suite/issues"
+  },
+  "homepage": "https://github.com/carlos-cerv/TestCafe-Suite#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "testcafe": "^2.0.2"
+  }
+}
