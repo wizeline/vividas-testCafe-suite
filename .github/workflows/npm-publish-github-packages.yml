@@ -1,0 +1,22 @@
+name: Test Cafe Suite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  TestCafe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - uses: browser-actions/setup-chrome@latest
+
+      - run: npm install
+      - run: npm install selenium-webdriver@latest
+      - run: npm install chromedriver@latest
+      - run: npm ci
+      - run: npm test
