@@ -1,11 +1,10 @@
 import { Selector } from "testcafe";
+import loginPage from '../pages/loginPage'
 
 fixture`Login test suite`
     .page`https://www.saucedemo.com/`
 
 test('User must be logged in succesfully',async t => {
-    await t.typeText('#user-name','standard_user')
-    await t.typeText('input[data-test="password"]','secret_sauce')
-    await t.click('input[name="login-button"]')
+    await loginPage.submintLoginForm('standard_user','secret_sauce')
     await t.expect(Selector('.title').withText('PRODUCTS').exists).ok()
 })
