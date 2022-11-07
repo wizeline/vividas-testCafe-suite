@@ -1,4 +1,5 @@
 import { Selector } from "testcafe";
+import inventoryPage from "../pages/inventoryPage";
 import loginPage from '../pages/loginPage'
 
 fixture`Login test suite`
@@ -6,5 +7,5 @@ fixture`Login test suite`
 
 test('User must be logged in succesfully',async t => {
     await loginPage.submintLoginForm('standard_user','secret_sauce')
-    await t.expect(Selector('.title').withText('PRODUCTS').exists).ok()
+    await t.expect(inventoryPage.title.exists).ok()
 })
