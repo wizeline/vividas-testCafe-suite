@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./pom/tests"
+    "test": "testcafe chrome:headless ./pom/tests"
   },
   "repository": {
     "type": "git",
