@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome:headless ./pom/tests"
+    "test-local": "testcafe chrome ./pom/tests",
+    "test-actions": "testcafe chrome:headless ./pom/tests"
   },
   "repository": {
     "type": "git",
