@@ -15,15 +15,16 @@ jobs:
           node-version: "16.x"
       - uses: browser-actions/setup-chrome@latest
       - run: ls
-      - run: cd TestCafe-Suite
       - run: |
           touch .env
            URL_TESTPAGE=https://www.saucedemo.com/ >> .env
            USER_PAGE=standard_user >> .env
            PASSWORD=secret_sauce >> .env
           cat .env
+      - run: ls
       - run: npm install
       - run: npm install selenium-webdriver@latest
       - run: npm install chromedriver@latest
       - run: npm ci
+      - run: ls
       - run: npm run test-git-actions
