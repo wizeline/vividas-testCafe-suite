@@ -24,4 +24,4 @@ jobs:
       - run: npm install selenium-webdriver@latest
       - run: npm install chromedriver@latest
       - run: npm ci
-      - run: npm test-git-actions
+      - run: npm run test-git-actions
