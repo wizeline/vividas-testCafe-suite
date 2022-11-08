@@ -1,4 +1,8 @@
-# TestCafe-Suite
+# TestCafé - E2E Suite
+
+TestCafe frees you from the need to insert manual timeouts and use cumbersome boilerplate expressions. You’ll spend less time tracking down annoying issues and more time doing what matters most.
+
+Open source documentation: [TestCafé](https://testcafe.io/)
 
 ## Pre-Conditions:
 
@@ -18,6 +22,12 @@
 3. In the root folder create a new file with the next name:
 
    `.env`
+
+   Update with your information and validate correct URL used locally, consider next base example:
+
+   `URL_TESTPAGE=`
+   `USER_PAGE=`
+   `PASSWORD=`
 
 4. Open the .env file and add the next variables. In BASE_URL add the home page url, in USER_SUCCESS and PASSWORD_SUCCESS add a valid email and password to login successfully in the todoist application:
 
