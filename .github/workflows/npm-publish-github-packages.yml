@@ -16,11 +16,10 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
       - run: ls
       - run: | 
-          cat > bar.txt
           touch .env
-           URL_TESTPAGE=https://www.saucedemo.com/ >> .env
-           USER_PAGE=standard_user >> .env
-           PASSWORD=secret_sauce >> .env
+           echo URL_TESTPAGE=https://www.saucedemo.com/ >> .env
+           echo USER_PAGE=standard_user >> .env
+           echo PASSWORD=secret_sauce >> .env
           cat .env
       - run: ls
       - run: npm install
