@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+env:
+  URL_TESTPAGE: "${{ secrets.URL_TESTPAGE }}"
+  USER_PAGE: "${{ secrets.USER_PAGE }}"
+  PASSWORD: "${{ secrets.PASSWORD }}"
+
 jobs:
   TestCafe:
     runs-on: ubuntu-latest
@@ -14,12 +19,6 @@ jobs:
         with:
           node-version: "16.x"
       - uses: browser-actions/setup-chrome@latest
-      - run: | 
-          touch .env
-           echo URL_TESTPAGE=https://www.saucedemo.com/ >> .env
-           echo USER_PAGE=standard_user >> .env
-           echo PASSWORD=secret_sauce >> .env
-          cat .env
       - run: npm install
       - run: npm install selenium-webdriver@latest
       - run: npm install chromedriver@latest
